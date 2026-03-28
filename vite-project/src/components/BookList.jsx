@@ -1,12 +1,10 @@
+import BookItem from "./BookItem";
+
 function BookList({ books }) {
   return (
     <div>
       {books.map((book, index) => (
-        <div key={index}>
-          <p>
-            <b>{book.title}</b> - {book.author} - ${book.price}
-          </p>
-        </div>
+        <BookItem key={index} book={book} />
       ))}
     </div>
   );
